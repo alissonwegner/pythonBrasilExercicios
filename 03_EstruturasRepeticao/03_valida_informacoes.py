@@ -1,35 +1,29 @@
-# Validacao do nome
-nome = ''
+# 3.Faça um programa que leia e valide as seguintes informações:
+#     Nome: maior que 3 caracteres;
+#     Idade: entre 0 e 150;
+#     Salário: maior que zero;
+#     Sexo: 'f' ou 'm';
+#     Estado Civil: 's', 'c', 'v', 'd';
+nome = input('Informe um nome: ')
 while (len(nome) <= 3):
-    nome = raw_input('Informe um nome: ')
-    if (len(nome) <= 3):
-        print 'O nome deve ter mais de tres letras!'
+    nome = input('Informe um nome com mais de 3 caracteres: ')
 
-# Validacao da idade
-idade = -1
+idade = int(input('Informe a idade: '))
 while (idade < 0) or (idade > 150):
-    idade = int(raw_input('Informe a idade: '))
-    if (idade < 0) or (idade > 150):
-        print 'Idade deve estar entre 0 e 150'
+    idade = int(input('Informe a idade maio a 0 e menor que 150: '))
 
-# Validacao do salario
-salario = 0
+salario = int(input('Informe o salario: '))
 while (salario <= 0):
-    salario = int(raw_input('Informe o salario: '))
-    if (salario <= 0):
-        print 'O salario deve ser maior que zero'
+    salario = int(input('Informe o salario valido: '))
 
-# Valida o sexo
-sexo = ''
+sexo = input('Informe o sexo: ').upper()
+#upper utilizado para colocar em caixa alta 
 while (sexo != 'F') and (sexo != 'M'):
-    sexo = raw_input('Informe o sexo: ').upper()
-    if (sexo != 'F') and (sexo != 'M'):
-        print 'O sexo deve ser infomado como M (masculino) ou F (feminino)'
+    sexo = input('Informe o sexo valido: ').upper()
 
-# Valida o estado civil
-estado_civil = 'A'
+estado_civil = input('Informe o estado civil: ').upper()
 while ('SCVD'.find(estado_civil) < 0):
-    estado_civil = raw_input('Informe o estado civil: ').upper()
-    if ('SCVD'.find(estado_civil) < 0):
-        print 'Estado civil deve ser informado como S (solteiro), C (casado),'\
-            ' V (viuvo) ou D (divorciado)'
+    estado_civil = input('Informe o estado civil valido: ').upper()
+    #find usado para saber se valor lido esta na string 'SCVD'
+
+print("exercicio finalizado")
